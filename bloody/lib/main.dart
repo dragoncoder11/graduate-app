@@ -1,0 +1,35 @@
+import 'package:bloody/features/register/presentation/views/create_new_password.dart';
+import 'package:bloody/features/register/presentation/views/forget_password.dart';
+import 'package:bloody/features/register/presentation/views/login_page.dart';
+import 'package:bloody/features/register/presentation/views/verify_methods.dart';
+import 'package:bloody/features/register/presentation/views/otp_code_phone.dart';
+import 'package:bloody/features/register/presentation/views/verify_by_email.dart';
+import 'package:bloody/features/register/presentation/views/verify_by_phone.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const BloodApp());
+}
+
+class BloodApp extends StatelessWidget {
+  const BloodApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+    routes: {
+      VerifyMethods.id :(context) =>const VerifyMethods(),
+      VerifyByPhone.id :(context) =>const VerifyByPhone(),
+      OtpCodePhone.id :(context) =>const OtpCodePhone(),
+      VerifyByEmail.id :(context) =>const VerifyByEmail(),
+      LoginPage.id:(context) =>const LoginPage(),
+      ForgetPassword.id:(context) =>const ForgetPassword(),
+      CreateNewPassword.id:(context) =>const CreateNewPassword(),
+
+    },
+      initialRoute: LoginPage.id,
+    );
+  }
+}
