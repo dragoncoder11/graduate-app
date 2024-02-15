@@ -19,6 +19,11 @@ abstract class Styles{
     fontSize: 14,
     fontFamily: 'Arial',
   );
+   static TextStyle style12= TextStyle(
+    color: kTextGreyColor,
+    fontSize: 12,
+    fontFamily: 'Arial',
+  );
    static TextStyle style16SemiBold=const TextStyle(
     color: Colors.white,
     fontSize: 16,
@@ -29,5 +34,10 @@ abstract class Styles{
     color: kTextGreyColor,
     fontSize: 11,
     fontFamily: 'Arial',
+  );
+   static TextStyle styles18Bold=const TextStyle(
+    color: Colors.black,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
   );
 } 

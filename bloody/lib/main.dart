@@ -1,3 +1,6 @@
+import 'package:bloody/features/donation/presentation/views/donation_history.dart';
+import 'package:bloody/features/donation/presentation/views/settings.dart';
+import 'package:bloody/features/donation/presentation/views/terms_and_conditions.dart';
 import 'package:bloody/features/register/presentation/views/create_new_password.dart';
 import 'package:bloody/features/register/presentation/views/forget_password.dart';
 import 'package:bloody/features/register/presentation/views/login_page.dart';
@@ -27,9 +30,11 @@ class BloodApp extends StatelessWidget {
       LoginPage.id:(context) =>const LoginPage(),
       ForgetPassword.id:(context) =>const ForgetPassword(),
       CreateNewPassword.id:(context) =>const CreateNewPassword(),
-
+      DonationHistory.id:(context) =>const DonationHistory(),
+      Settings.id:(context) =>const Settings(),
+      TermsAndConditions.id:(context) =>const TermsAndConditions(),
     },
-      initialRoute: LoginPage.id,
+      initialRoute: TermsAndConditions.id,
     );
   }
 }
