@@ -23,7 +23,7 @@ class TermsAndConditionsBody extends StatelessWidget {
   Column csutomcolumntext({required String title,required String subtitle}) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-    Text(title,style: Styles.style14.copyWith(color: Colors.black),),
+    Text(title,style: Styles.style14Bold.copyWith(color: Colors.black.withOpacity(.8)),),
     const SizedBox(height: 10,),
     Text(subtitle,
     style: Styles.style12.copyWith(color: Colors.black),),

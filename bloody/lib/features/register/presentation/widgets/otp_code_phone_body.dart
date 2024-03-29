@@ -18,7 +18,7 @@ class OtpCodePhoneBody extends StatelessWidget {
                const SizedBox(height: 40,),
                Text('Verifying Code',style: Styles.style24Bold,),
                      const SizedBox(height: 10,),
-                  Text('Code has been sent to${controller}',style: Styles.style14,),
+                  Text('Code has been sent to    $controller',style: Styles.style14,),
                   const SizedBox(height: 80,),
                 OtpTextField(
         numberOfFields: 4,

@@ -7,13 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class VerifyByPhoneBody extends StatelessWidget {
-  const VerifyByPhoneBody({
+   VerifyByPhoneBody({
     super.key,
   });
+       String controller='';
+
   @override
   
   Widget build(BuildContext context) {
-      TextEditingController controller=TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal:20.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +27,7 @@ class VerifyByPhoneBody extends StatelessWidget {
                   Text('we\'re going to send you a',style: Styles.style14,),
                   Text('verification code.',style: Styles.style14,),
                   const SizedBox(height: 40,),
-                  IntlPhoneField(controller: controller,
+                  IntlPhoneField(
                     keyboardType: TextInputType.phone,
                     decoration:const InputDecoration(
                       
@@ -42,7 +43,9 @@ class VerifyByPhoneBody extends StatelessWidget {
     ),
     initialCountryCode: 'en',
     onChanged: (phone) {
+
         print(phone.completeNumber);
+        controller=phone.completeNumber ;
     },
                   )
             ],),

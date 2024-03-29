@@ -1,5 +1,4 @@
 import 'package:bloody/core/utils/constants.dart';
-import 'package:bloody/core/utils/custom_button.dart';
 import 'package:bloody/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +42,6 @@ class SettingsBody extends StatelessWidget {
               ],
             ),
           ),
-          CustomButton(ontap: (){}, title: 'Save')
         ],
       ),
     );
