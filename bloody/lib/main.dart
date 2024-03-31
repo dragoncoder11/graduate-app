@@ -1,4 +1,5 @@
 import 'package:bloody/features/donation/presentation/views/donation_history.dart';
+import 'package:bloody/features/home/presentation/views/register_donatation.dart';
 import 'package:bloody/features/home/presentation/views/settings.dart';
 import 'package:bloody/features/donation/presentation/views/terms_and_conditions.dart';
 import 'package:bloody/features/home/presentation/views/home.dart';
@@ -23,20 +24,21 @@ class BloodApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    routes: {
-      VerifyMethods.id :(context) =>const VerifyMethods(),
-      VerifyByPhone.id :(context) =>const VerifyByPhone(),
-      OtpCodePhone.id :(context) =>const OtpCodePhone(),
-      VerifyByEmail.id :(context) =>const VerifyByEmail(),
-      LoginPage.id:(context) =>const LoginPage(),
-      ForgetPassword.id:(context) =>const ForgetPassword(),
-      CreateNewPassword.id:(context) =>const CreateNewPassword(),
-      DonationHistory.id:(context) =>const DonationHistory(),
-      Settings.id:(context) =>const Settings(),
-      TermsAndConditions.id:(context) =>const TermsAndConditions(),
-      Home.id:(context) =>const Home(),
-    },
-      initialRoute: Home.id,
+      routes: {
+        VerifyMethods.id: (context) => const VerifyMethods(),
+        VerifyByPhone.id: (context) => const VerifyByPhone(),
+        OtpCodePhone.id: (context) => const OtpCodePhone(),
+        VerifyByEmail.id: (context) => const VerifyByEmail(),
+        LoginPage.id: (context) => const LoginPage(),
+        ForgetPassword.id: (context) => const ForgetPassword(),
+        CreateNewPassword.id: (context) => const CreateNewPassword(),
+        DonationHistory.id: (context) => const DonationHistory(),
+        Settings.id: (context) => const Settings(),
+        TermsAndConditions.id: (context) => const TermsAndConditions(),
+        Home.id: (context) => const Home(),
+        RegisterDonation.id: (context) => const RegisterDonation(),
+      },
+      initialRoute: RegisterDonation.id,
     );
   }
 }

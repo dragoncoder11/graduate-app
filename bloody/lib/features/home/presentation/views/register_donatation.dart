@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class RegisterDonation extends StatelessWidget {
   const RegisterDonation({super.key});
-
+ static String id='register donation';
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: RegisterDonationBody(),
     );
   }

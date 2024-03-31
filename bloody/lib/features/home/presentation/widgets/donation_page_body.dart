@@ -1,5 +1,8 @@
 import 'package:bloody/core/utils/constants.dart';
+import 'package:bloody/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+
+import 'instructions_list_view.dart';
 
 class DonationPageBody extends StatelessWidget {
   const DonationPageBody({
@@ -12,10 +15,12 @@ class DonationPageBody extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20, top: 60),
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Instructions '),
+            Text(
+              'Instructions ',
+              style: Styles.styles18Bold,
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -23,35 +28,17 @@ class DonationPageBody extends StatelessWidget {
               'assets/blood.png',
               width: double.infinity,
             ),
-            const Row(
-              children: [
-                Text(
-                  'At least',
-                  style: TextStyle(color: kPrimaryColor),
-                ),
-                Text(', you must be 18 years old and weigh 50 kg '),
-              ],
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: kPrimaryColor),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: MediaQuery.of(context).size.height * .3,
+              child:const Padding(
+                padding:  EdgeInsets.all(10),
+                child: InstructionsListView(),
+              ),
             ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-                'You must get enough hours of sleep before donating blood. '),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-                'Do not take aspirin before donating blood for a whole day. '),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-                'Eat balanced meals containing a large amount of nutrients and avoid fatty foods before donating blood. '),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-                'Drink a large amount of fluids one day before donating blood, as well as after donating. '),
             const SizedBox(
               height: 20,
             ),
