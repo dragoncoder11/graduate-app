@@ -9,7 +9,7 @@ class DonationHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(leading: IconButton(onPressed: (){Navigator.pop(context);}, icon:const Icon( Icons.arrow_back_ios)),elevation: 0,backgroundColor: Colors.transparent,title: Text('Donation History',style: Styles.styles18Bold,),centerTitle: true,),
+    appBar: AppBar(leading: IconButton(onPressed: (){Navigator.pop(context);}, icon:const Icon( Icons.arrow_back_ios)),elevation: 0,backgroundColor: Colors.transparent,title: Text('Hospital Notification',style: Styles.styles18Bold,),centerTitle: true,),
      body:const DonationHistoryBody() ,
     );
   }

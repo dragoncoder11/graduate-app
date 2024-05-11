@@ -38,7 +38,7 @@ class BloodApp extends StatelessWidget {
         Home.id: (context) => const Home(),
         RegisterDonation.id: (context) => const RegisterDonation(),
       },
-      initialRoute: RegisterDonation.id,
+      initialRoute: DonationHistory.id,
     );
   }
 }
