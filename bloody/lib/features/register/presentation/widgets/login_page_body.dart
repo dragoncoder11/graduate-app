@@ -30,7 +30,7 @@ class LoginPageBody extends StatelessWidget {
               ),
               const SizedBox(height: 40,),
                CustomTextField(hint: 'Email',controller: emailController,),
-               CustomTextField(hint: 'Password',icon: Icons.visibility,controller: passwordController,obscureText: true,),
+               CustomTextField(hint: 'Password',controller: passwordController,obscureText: true,),
                const SizedBox(height: 20,),
                CustomButton(ontap: (){
                  if (globalKey.currentState!.validate()) {

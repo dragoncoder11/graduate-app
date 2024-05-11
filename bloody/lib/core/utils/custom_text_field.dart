@@ -2,37 +2,46 @@ import 'package:bloody/core/utils/constants.dart';
 import 'package:bloody/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  final IconData? icon;
+class CustomTextField extends StatefulWidget {
   final String hint;
   final TextEditingController controller;
-  final bool obscureText;
+  bool obscureText;
 
-  const CustomTextField({
+   CustomTextField({
     Key? key,
-     this.icon,
     required this.hint,
     required this.controller,  this.obscureText=false,
     
   }) : super(key: key);
 
   @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
         cursorColor: kTextGreyColor,
-        controller: controller,
+        controller: widget.controller,
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return 'Please enter $hint';
+            return 'Please enter ${widget.hint}';
           }
           return null;
         },
         style: Styles.style14,
         decoration: InputDecoration(
-          suffixIcon: Icon(icon, color: Colors.grey),
-          hintText: hint,
+          suffixIcon:(widget.hint.toLowerCase().contains('password'))? IconButton(
+              onPressed: () {
+                setState(() {
+                  widget.obscureText=!widget.obscureText;
+                });
+              },
+              icon: widget.obscureText?const Icon(Icons.visibility_off):const Icon(Icons.visibility)):null,
+          hintText: widget.hint,
           hintStyle: Styles.style11.copyWith(
             color: Colors.grey,
             fontSize: 14,
@@ -50,6 +59,7 @@ class CustomTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
+        obscureText: widget.obscureText,
         
       ),
     );
