@@ -18,14 +18,14 @@ class VerifyItem extends StatelessWidget {
         padding:const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
         width: double.infinity,
         height: 80,
-        decoration: BoxDecoration(border: Border.all(width: 1,color:isActive?kPrimaryColor: Colors.grey),borderRadius: BorderRadius.circular(8)),
+        decoration: BoxDecoration(border: Border.all(width: 1,color:isActive?kPrimaryColor : Colors.grey),borderRadius: BorderRadius.circular(8)),
         child: Row(children: [
           Container(height: 60,width: 60
             ,decoration: BoxDecoration(
               color: Colors.grey.withOpacity(0.1),
             shape: BoxShape.circle,
           ),
-          child: Icon(icon,color:isActive?kPrimaryColor:Colors.grey,),
+          child: Icon(icon,color:isActive?kPrimaryColor :Colors.grey,),
           ),
          const SizedBox(width: 20,),
           Column(crossAxisAlignment: CrossAxisAlignment.start,children: [

@@ -39,11 +39,11 @@ class LoginPageBody extends StatelessWidget {
                },title: 'Sign in',),
                GestureDetector(onTap: () {
                  Navigator.of(context).pushNamed(ForgetPassword.id);
-               },child:  Text('Forgot password?',style: Styles.style14Bold.copyWith(color: kPrimaryColor),textAlign: TextAlign.center,)),
+               },child:  Text('Forgot password?',style: Styles.style14Bold.copyWith(color: kPrimaryColor ),textAlign: TextAlign.center,)),
                const SizedBox(height: 10,),
                Row(mainAxisAlignment: MainAxisAlignment.center,children: [
                  Text('Don’t have an account?   ',style: Styles.style14),
-                 Text(' Sign Up',style: Styles.style14.copyWith(color: kPrimaryColor)),
+                 Text(' Sign Up',style: Styles.style14.copyWith(color: kPrimaryColor )),
            
                ],),
                   const SizedBox(height: 15,),

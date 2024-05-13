@@ -23,10 +23,10 @@ class OtpCodePhoneBody extends StatelessWidget {
                 OtpTextField(
         numberOfFields: 4,
         borderRadius: BorderRadius.circular(8),
-        enabledBorderColor: kPrimaryColor,
+        enabledBorderColor: kPrimaryColor ,
         fieldWidth: 60,
         borderColor: Colors.black.withOpacity(.7),
-        focusedBorderColor: kPrimaryColor,
+        focusedBorderColor: kPrimaryColor ,
         //set to true to show as box or false to show as dash
         showFieldAsBox: true, 
         //runs when a code is typed in

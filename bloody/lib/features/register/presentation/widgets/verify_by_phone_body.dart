@@ -33,7 +33,7 @@ class VerifyByPhoneBody extends StatelessWidget {
                       
                       focusedBorder:OutlineInputBorder(
                         
-            borderSide: BorderSide(color: kPrimaryColor,width: 2),
+            borderSide: BorderSide(color: Colors.red,width: 2),
         ), 
         labelText: 'Phone Number',
         labelStyle: TextStyle(color: kTextGreyColor),

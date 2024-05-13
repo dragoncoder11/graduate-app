@@ -30,7 +30,7 @@ class DonationPageBody extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                border: Border.all(width: 2, color: kPrimaryColor),
+                border: Border.all(width: 2, color: kPrimaryColor ),
                 borderRadius: BorderRadius.circular(12),
               ),
               height: MediaQuery.of(context).size.height * .3,

@@ -45,7 +45,7 @@ class HelpCard extends StatelessWidget {
             ),
             Text(
               'Donate',
-              style: Styles.style12.copyWith(color: kPrimaryColor),
+              style: Styles.style12.copyWith(color: kPrimaryColor ),
             )
           ],
         ),

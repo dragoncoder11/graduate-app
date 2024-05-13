@@ -27,7 +27,7 @@ class HomePageBody extends StatelessWidget {
           ),
           Text(
             'Hi Khaled!',
-            style: Styles.styles18Bold.copyWith(color: kPrimaryColor),
+            style: Styles.styles18Bold.copyWith(color: kPrimaryColor ),
           ),
           const SizedBox(
             height: 30,
